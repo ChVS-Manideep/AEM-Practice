@@ -1,0 +1,8 @@
+<template data-sly-template.eventsInfoTemplate="${ @ eventsInfo}">
+	<h3>Events</h3>
+	<sly data-sly-list.item=${eventsInfo.eventsInformation}>
+		<p><b>Event : </b>${item.eventName}</p>
+		<p><b>Location : </b>${item.location}</p>
+		<p><b>Event Date : </b>${item.eventDate}</p>
+	</sly>
+</template>

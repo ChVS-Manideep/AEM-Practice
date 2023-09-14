@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:conf=""
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-07-08T22:24:27.793+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastTranslationDone="{Date}2023-07-08T22:24:27.793+05:30"
+        cq:lastTranslationUpdate="{Date}2023-07-08T19:58:49.938+05:30"
+        cq:template="/conf/mydevelopment/settings/wcm/templates/dev-template"
+        cq:translationJob="[/content/projects/msm_translation/msm_translation/jcr:content/dashboard/gadgets/translationjob0]"
+        cq:translationMethod="MACHINE_TRANSLATION"
+        cq:translationProject="[/content/projects/msm_translation/msm_translation]"
+        cq:translationProviderCloudConfig="/libs/settings/cloudconfigs/translation/msft-translation/msft_trial"
+        cq:translationProviderName="microsoft"
+        cq:translationSourcePath="/content/mydevelopment/language-masters/en"
+        cq:translationStatus="APPROVED"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="हिंदी"
+        sling:resourceType="mydevelopment/components/structure/page"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:lastModified="{Date}2023-07-04T19:32:10.500+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+    </jcr:content>
+    <home/>
+    <components/>
+    <test-page/>
+    <authoring/>
+    <blogs/>
+</jcr:root>

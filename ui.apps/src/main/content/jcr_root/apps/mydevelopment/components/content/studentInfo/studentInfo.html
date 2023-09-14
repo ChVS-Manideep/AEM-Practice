@@ -1,0 +1,22 @@
+<sly data-sly-use.studentInfoModel="com.practice.mydevelopment.core.models.StudentInfoModel"/>
+
+<sly data-sly-test.authorMode="${(wcmmode.edit || wcmmode.design)}"/>
+<sly data-sly-test.hasContent="${(studentInfoModel.studentDetails)}"/>
+<sly data-sly-test="${authorMode && !hasContent}">
+    <div data-emptytext="Please configure Student Information Component" class="cq-placeholder"></div>
+</sly>
+
+<sly data-sly-test="${hasContent}">
+    <div>
+        <h2>Student Information</h2>
+    </div>
+    <div>
+        <div data-sly-list.item="${studentInfoModel.studentDetails}">
+            <p> Roll No : <b>${item.rollNumber}</b></p>
+            <p> Name : <b>${item.studentName}</b></p>
+            <p> Class : <b>${item.class}</b></p>
+            <p> School : <b>${item.school}</b></p>
+            -----------------------------------------------------------------
+        </div>
+    </div>
+</sly>

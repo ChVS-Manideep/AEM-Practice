@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:conf=""
+        cq:isLanguageRoot="{Boolean}true"
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-07-08T21:52:42.230+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastTranslationUpdate="{Date}2023-07-08T21:52:42.230+05:30"
+        cq:template="/conf/mydevelopment/settings/wcm/templates/dev-template"
+        cq:translationSourcePath="/content/mydevelopment/language-masters/en"
+        jcr:language="cs"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Czech"
+        sling:resourceType="mydevelopment/components/structure/page"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:lastModified="{Date}2023-07-04T19:32:10.500+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+    </jcr:content>
+    <blogs/>
+</jcr:root>

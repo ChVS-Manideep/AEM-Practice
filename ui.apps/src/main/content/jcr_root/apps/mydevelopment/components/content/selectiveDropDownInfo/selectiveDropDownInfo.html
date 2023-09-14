@@ -1,0 +1,28 @@
+<sly data-sly-use.selectiveDropdownInfoModel="com.practice.mydevelopment.core.models.SelectiveDropDownInfoModel" />
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories=['mydevelopment.selectivetabs']}"/>
+
+<sly data-sly-test.authorMode="${(wcmmode.edit || wcmmode.design)}" />
+<sly
+    data-sly-test.hasContent="${(selectiveDropdownInfoModel.articlesInformation || selectiveDropdownInfoModel.eventsInformation || selectiveDropdownInfoModel.productsInformation)}" />
+<sly data-sly-test="${authorMode && !hasContent}">
+    <div data-emptytext="Please configure Selective Drop-down Information Component" class="cq-placeholder"></div>
+</sly>
+
+<sly data-sly-test="${hasContent}">
+    <div>
+        <h2>Selective Drop-down Information</h2>
+    </div>
+     <sly data-sly-test="${selectiveDropdownInfoModel.dynamicInfo == 'articles'}"
+        data-sly-use.articleTemplate="partials/article-info.html"
+        data-sly-call="${articleTemplate.articlesInfoTemplate @ articlesInfo=selectiveDropdownInfoModel}" />
+
+    <sly data-sly-test="${selectiveDropdownInfoModel.dynamicInfo == 'events'}"
+        data-sly-use.eventTemplate="partials/event-info.html"
+        data-sly-call="${eventTemplate.eventsInfoTemplate @ eventsInfo=selectiveDropdownInfoModel}" />
+
+    <sly data-sly-test="${selectiveDropdownInfoModel.dynamicInfo == 'products'}"
+        data-sly-use.productTemplate="partials/product-info.html"
+        data-sly-call="${productTemplate.productsInfoTemplate @ productsInfo=selectiveDropdownInfoModel}" />
+</sly>

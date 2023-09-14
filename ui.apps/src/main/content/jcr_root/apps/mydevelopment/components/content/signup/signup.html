@@ -1,0 +1,76 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.all @ categories='FormComponent.styles,cq.authoring.dialog'}" />
+
+<sly data-sly-use.formDataModel="com.adobe.aem.practice.core.models.SignUpFormModel" />
+
+<h1>Registration form</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+ <form id="submitForm" name="myForm" method="post" action="/apps/my/servlets/path/create"
+      onsubmit="return validateForm()">
+    <label for="firstname">${properties.firstName}:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+
+    <label for="lastname">${formDataModel.lastName}:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+
+    <label for="phoneNumber">${formDataModel.phoneNumber}:</label>
+    <input type="number" id="phoneNumber" name="phoneNumber" required><br><br>
+
+    <label for="email">${formDataModel.email}:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label>${formDataModel.gender}:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male" class="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female" class="female">Female</label><br><br>
+
+    <div class="g-recaptcha" data-sitekey="6LcwjmEmAAAAABRZLDdFKe3DnJ7ZnFg1Nlzt1Khe"></div>
+
+    <input type="reset" class="reset" value="Reset">
+
+
+<input type="submit" class="submit" value="Submit">
+
+  </form>
+
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  let y = document.forms["myForm"]["email"].value;
+  let z = document.forms["myForm"]["phone"].value;
+  if (x == "") {
+    alert("First name field must be filled.");
+    return false;
+  }
+  if (y == "") {
+    alert("Email field must be filled.");
+    return false;
+  }
+    if (!y.endsWith("@gmail.com")) {
+    alert("Email format was wrong.");
+    return false;
+  }
+  if (z == "" || z.length!=10) {
+    alert("Phone number field must be filled and should have 10 digits only.");
+    return false;
+  }
+}
+
+ 
+
+    </script>
+
+</body>
+
+</html>

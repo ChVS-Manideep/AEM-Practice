@@ -1,0 +1,29 @@
+<sly data-sly-use.vehicleInfoModel="com.practice.mydevelopment.core.models.VehiclesInfoModel" />
+
+<sly data-sly-test.authorMode="${(wcmmode.edit || wcmmode.design)}" />
+<sly data-sly-test.hasContent="${(vehicleInfoModel.vehiclesInfo)}" />
+<sly data-sly-test="${authorMode && !hasContent}">
+    <div data-emptytext="Please configure Vehicles Information Component" class="cq-placeholder"></div>
+</sly>
+
+<sly data-sly-test="${hasContent}">
+    <div>
+        <h2>Vehicles Information</h2>
+    </div>
+    <div>
+
+        <p><b>Manufactured in : </b>${vehicleInfoModel.state}</p>
+        <p><b>Pincode : </b>${vehicleInfoModel.pincode}</p>
+        <div data-sly-repeat.item="${vehicleInfoModel.vehiclesInfo}">
+            <p><b>Vehicle Type : </b>${item.vehicleType}</p>
+            <p><b>Brand : </b>${item.manufacturer}</p>
+            <p><b>Manufacturing Year : </b>${item.year}</p>
+            <p><b>Price : </b>Rs: ${item.price}/-</p>
+            <div data-sly-repeat.specItem="${item.vehicleSpecs}">
+               <p> <b>${specItem.specification} : </b>
+                ${specItem.specificationValue}</p>
+            </div>
+
+-----------------------------------------------------------------------------
+        </div>
+</sly>

@@ -1,0 +1,12 @@
+<template data-sly-template.articlesInfoTemplate="${ @ articlesInfo}">
+	<div>
+		<h2>${articlesInfo.heading}</h2>
+	</div>
+	<sly data-sly-list.item=${articlesInfo.articlesInformation}>
+		<h2>Book ${itemList.count}</h2>
+		<p><b>Title : </b>${item.title}</p>
+		<p><b>Author : </b>${item.author}</p>
+		<p><b>Description : </b>${item.authorDescription @ context = "html"}</p>
+		<p><b>Publication Date : </b>${item.publicationDate}</p>
+	</sly>
+</template>

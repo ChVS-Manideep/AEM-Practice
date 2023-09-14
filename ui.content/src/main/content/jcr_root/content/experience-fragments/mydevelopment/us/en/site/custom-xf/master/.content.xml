@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-04T16:08:19.952+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/mydevelopment/settings/wcm/templates/experience-fragment-web-variation-template"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Custom XF"
+        sling:resourceType="mydevelopment/components/structure/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    jcr:created="{Date}2023-07-04T15:07:41.853+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-07-04T15:07:54.686+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="                                                                          Custom XF"
+                    sling:resourceType="mydevelopment/components/content/title"/>
+                <teammembersinfo
+                    jcr:created="{Date}2023-07-04T15:08:03.341+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-07-04T15:10:25.024+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mydevelopment/components/content/teamMembersInfo">
+                    <teamMemberInfo jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            bio="AEM Developer"
+                            email="chvs@gmail.com"
+                            name="Mani"
+                            role="Developer"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            bio="AEM Developer"
+                            email="deep@gmail.com"
+                            name="Deep"
+                            role="Lead"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            bio="AEM Developer"
+                            email="mahesh@gmail.com"
+                            name="Mahesh"
+                            role="Manager"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            bio="Film Actor"
+                            email="aarav@gmail.com"
+                            name="Aarav"
+                            role="Actor"/>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            bio="Film character&#xd;&#xa;&#xd;&#xa;Hamaari adhuri Kahaani&#xd;&#xa;"
+                            email="vasudha@gmail.com"
+                            name="Vasudha"
+                            role="Actress"/>
+                    </teamMemberInfo>
+                </teammembersinfo>
+                <employeeinfo
+                    jcr:created="{Date}2023-07-04T15:10:40.499+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-07-04T15:11:45.979+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mydevelopment/components/content/employeeInfo"
+                    empDataPath="/content/practice/us"
+                    empDesignation="Analyst"
+                    empDOJ="{Date}2023-07-01T00:00:00.000+05:30"
+                    empExperience="true"
+                    empGender="Male"
+                    empId="46082493"
+                    empMobileNumber="9391383143"
+                    empName="Mani"
+                    fileReference="/content/dam/core-components-examples/library/sample-assets/lava-into-ocean.jpg"/>
+                <deliveryinformation_
+                    cq:styleIds="[1687322606006]"
+                    jcr:created="{Date}2023-06-19T13:26:27.312+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-19T13:57:28.821+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="magneto/components/content/deliveryInformation"
+                    deliveryInfo="&lt;h2>Express Delivery Included:&lt;/h2>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Unboxing, assemble and set-up&lt;/li>&#xd;&#xa;&lt;li>Packaging removal and takeaway&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;h2>Delivery Information:&lt;/h2>&#xd;&#xa;&lt;p>You can expect your Glass TV delivered on 3-5 business days from metropolitan areas and 5-10 days for regional.&lt;/p>&#xd;&#xa;&lt;p>You should expect to receive updates in the delivery of your hardware via email to your regiestered email address&lt;/p>&#xd;&#xa;"
+                    info="&lt;p>&lt;strong>Configure Detail Section Type drop-down based upon the requirements&lt;/strong>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Select Description and Single Line Details to display Description and Description Points&lt;/li>&#xd;&#xa;&lt;li>Select Single Line Specifications to display Specification Points&lt;/li>&#xd;&#xa;&lt;li>Select Specifications and Single Line Details to display Specifications Name &amp;amp; Value and Specification Description and Specification Points&lt;/li>&#xd;&#xa;&lt;li>Select Specifications Values to display Specifications Name &amp;amp; Value&lt;/li>&#xd;&#xa;&lt;/ul>"
+                    textIsRich="[true,true]"/>
+                <helloworld
+                    cq:masterBuildingBlock="{Boolean}true"
+                    jcr:created="{Date}2023-07-04T15:12:06.894+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-07-04T16:07:22.324+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="HelloWorld"
+                    sling:resourceType="cq/experience-fragments/editor/components/buildingblock">
+                    <helloworld362652949259700
+                        jcr:lastModified="{Date}2023-07-04T15:12:06.894+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mydevelopment/components/content/helloworld"/>
+                    <text
+                        jcr:created="{Date}2023-07-04T16:06:37.254+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-07-04T16:06:50.345+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mydevelopment/components/content/text"
+                        text="&lt;p>Sample Text&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                </helloworld>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    info="&lt;p>&lt;strong>Configure&amp;nbsp; drop-down based upon the requirements&lt;/strong>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Select Events to configure events information&lt;/li>&#xa;&lt;li>Select Articles to configure articles information&lt;/li>&#xa;&lt;li>Select Products to configure product information&lt;/li>&#xa;&lt;/ul>"/>

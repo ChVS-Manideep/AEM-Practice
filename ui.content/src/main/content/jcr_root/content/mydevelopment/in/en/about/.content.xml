@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-11T13:31:01.571+05:30"
+        cq:lastModifiedBy="msm-service"
+        cq:lastRolledout="{Date}2023-07-11T13:31:01.579+05:30"
+        cq:lastRolledoutBy="msm-service"
+        cq:template="/conf/mydevelopment/settings/wcm/templates/dev-template"
+        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="About"
+        sling:resourceType="mydevelopment/components/structure/page">
+        <root
+            cq:lastRolledout="{Date}2023-07-11T13:31:01.563+05:30"
+            cq:lastRolledoutBy="msm-service"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                cq:lastRolledout="{Date}2023-07-11T13:31:01.577+05:30"
+                cq:lastRolledoutBy="msm-service"
+                jcr:lastModified="{Date}2023-07-11T13:31:01.569+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,12 @@
+.select__background {
+	background: darkgray;
+}
+
+.select__color {
+	font-size: x-large;
+	color: lightskyblue;
+}
+
+.select__orientation {
+	text-align: center;
+}

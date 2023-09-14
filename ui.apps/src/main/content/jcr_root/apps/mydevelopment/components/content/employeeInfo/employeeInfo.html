@@ -1,0 +1,36 @@
+<sly data-sly-use.empInfoModel="com.practice.mydevelopment.core.models.EmployeeInfoModel"/>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories=['mydevelopment.employeeinfo']}"/>
+
+<sly data-sly-test.authorMode="${(wcmmode.edit || wcmmode.design)}"/>
+<sly data-sly-test.hasContent="${(empInfoModel.empId || empInfoModel.empName || empInfoModel.empGender || empInfoModel.empDOJ || empInfoModel.empMobileNumber || empInfoModel.empExperience || empInfoModel.empDataPath)}"/>
+<sly data-sly-test="${authorMode && !hasContent}">
+    <div data-emptytext="Please configure Employee Information Component" class="cq-placeholder"></div>
+</sly>
+
+<sly data-sly-test="${hasContent}">
+    <div class="emp__root">
+        <div class="emp__title">
+            Employee Information
+        </div>
+        <div class="emp__info">
+            <img src="${empInfoModel.fileReference}" width="50" height="60">
+            <h5>Employee ID : ${empInfoModel.empId} </h5>
+            <h5>Employee Name : ${empInfoModel.empName}</h5>
+            <h5>Employee Gender : ${empInfoModel.empGender}</h5>
+            <h5>Employee Date Of Joining : ${empInfoModel.empDOJ}</h5>
+            <h5>Employee Mobile Number : ${empInfoModel.empMobileNumber}</h5>
+            <h5>Employee Designation : ${empInfoModel.empDesignation}</h5>
+            <h5>Is Employee Experienced? : ${empInfoModel.empExperience ? "Yes" : "No"}</h5>
+            <h5>Employee Data Path : ${empInfoModel.empDataPath}</h5>
+            <h5>Employee Resume : </h5>
+            <a href="${empInfoModel.empResume.path}" target="_blank">${empInfoModel.empResume.name}</a>
+        </div>
+    </div>
+</sly>
+
+
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories=['mydevelopment.employeeinfo']}"/>

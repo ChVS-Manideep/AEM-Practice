@@ -1,0 +1,43 @@
+<sly data-sly-use.teamMembInfoModel="com.practice.mydevelopment.core.models.TeamMembersInfoModel" />
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories=['mydevelopment.teamMemberInfo']}"/>
+
+<sly data-sly-test.authorMode="${(wcmmode.edit || wcmmode.design)}" />
+<sly data-sly-test.hasContent="${(teamMembInfoModel.teamMembersInfo)}" />
+<sly data-sly-test="${authorMode && !hasContent}">
+    <div data-emptytext="Please configure Team Members Information Component" class="cq-placeholder"></div>
+</sly>
+
+<sly data-sly-test="${hasContent}">
+    <div>
+        <h2>Team Members Information</h2>
+    </div>
+    <div>
+        <table style="border: 1px solid black;">
+            <thead>
+            <tr>
+                <th style="border: 1px solid black;">Name</th>
+                <th style="border: 1px solid black;">Role</th>
+                <th style="border: 1px solid black;">E-Mail</th>
+                <th style="border: 1px solid black;">Bio</th>
+            </tr>
+            </thead>
+            <div data-sly-repeat.item="${teamMembInfoModel.teamMembersInfo}">
+                <tbody>
+                <tr>
+                    <td style="border: 1px solid black;">${item.name}</td>
+                    <td style="border: 1px solid black;">${item.role}</td>
+                    <td style="border: 1px solid black;">${item.email}</td>
+                    <td style="border: 1px solid black;">${item.bio}</td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+
+</sly>
+
+
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories=['mydevelopment.teamMemberInfo']}"/>

@@ -1,0 +1,15 @@
+.emp__root{
+    text-align: center;
+    background: cadetblue;
+    width: 320px;
+    margin: auto;
+    border-radius: 15px;
+}
+.emp__title{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: times;
+}
+.emp__info{
+    
+}

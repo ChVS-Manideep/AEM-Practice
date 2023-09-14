@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[AEMProject.employeeinformation.validation]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Emp Data"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <firstname
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="First Name Title"
+                        name="./firstName"
+                        required="true"
+                        validation="regex.name.validation"/>
+                    <lastname
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Last Name Title"
+                        name="./lastName"
+                        required="true"
+                        validation="regex.name.validation"/>
+                    <phoneNumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Mobile Number Title"
+                        name="./phoneNumber"/>
+                    <email
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Email Title"
+                        name="./email"
+                        required="true"/>
+                    <gender
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Gender Title"
+                        name="./gender">
+                        <items jcr:primaryType="nt:unstructured">
+                            <male
+                                jcr:primaryType="nt:unstructured"
+                                text="Male"
+                                value="Male"/>
+                            <female
+                                jcr:primaryType="nt:unstructured"
+                                text="Female"
+                                value="Female"/>
+                        </items>
+                    </gender>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,7 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "scripts":[
+    "create service user mydev-service-user3 with path /home/users/system/mydev/mydev-service-users",
+    "set ACL for mydev-service-user3\r\nallow jcr:read,rep:write on /content/mydevelopment\r\nallow jcr:read on /conf/mydevelopment\r\nallow jcr:read on /apps\r\nend"
+  ]
+}

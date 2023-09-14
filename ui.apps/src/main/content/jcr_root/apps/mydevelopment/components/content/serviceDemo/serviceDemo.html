@@ -1,0 +1,19 @@
+<h2>Service Demo Component</h2>
+<sly data-sly-use.servicedemo = "com.practice.mydevelopment.core.models.ServiceDemoModel" />
+
+<h2>${servicedemo.name}</h2>
+---------------------------------------
+<h2>From Reference : ${servicedemo.nameWithReference}</h2>
+
+================Using Iterator==================
+<sly data-sly-list.item="${servicedemo.pagesList}">
+    <p>Page ${itemList.count} Title :<b> ${item.title}</b></p>
+</sly>
+
+================Using List===============
+
+<sly data-sly-list.item="${servicedemo.pageTitlesList}">
+    <p>Page ${itemList.count} Title :<b> ${item}</b></p>
+</sly>
+
+

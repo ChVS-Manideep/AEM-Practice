@@ -1,0 +1,76 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Jun 16 2023 16:33:40 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "socialMedia": [
+      "facebook"
+    ],
+    "jcr:title": "en",
+    "cq:template": "/conf/mydevelopment/settings/wcm/templates/content-page-template",
+    "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+    "jcr:created": "Fri Jun 16 2023 16:33:40 GMT+0530",
+    "cq:lastModified": "Sat Jul 01 2023 11:25:24 GMT+0530",
+    "pageTitle": "New Project",
+    "sling:resourceType": "mydevelopment/components/structure/page",
+    "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:lastModifiedBy": "admin",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "studentinfo": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Sat Jun 24 2023 14:17:50 GMT+0530",
+          "jcr:lastModified": "Sat Jun 24 2023 17:47:57 GMT+0530",
+          "sling:resourceType": "mydevelopment/components/content/studentInfo",
+          "studentInfo": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "studentName": "Mani",
+              "rollNumber": "1",
+              "school": "Vignan",
+              "class": "9"
+            },
+            "item1": {
+              "jcr:primaryType": "nt:unstructured",
+              "studentName": "Deep",
+              "rollNumber": "2",
+              "school": "St.Anns",
+              "class": "10"
+            },
+            "item2": {
+              "jcr:primaryType": "nt:unstructured",
+              "studentName": "Naidu",
+              "rollNumber": "3",
+              "school": "Vikas",
+              "class": "11"
+            },
+            "item3": {
+              "jcr:primaryType": "nt:unstructured",
+              "studentName": "Mahesh",
+              "rollNumber": "4",
+              "school": "SRKR",
+              "class": "12"
+            },
+            "item4": {
+              "jcr:primaryType": "nt:unstructured",
+              "studentName": "PK",
+              "rollNumber": "5",
+              "school": "Vishnu",
+              "class": "8"
+            }
+          }
+        }
+      }
+    }
+  }
+}

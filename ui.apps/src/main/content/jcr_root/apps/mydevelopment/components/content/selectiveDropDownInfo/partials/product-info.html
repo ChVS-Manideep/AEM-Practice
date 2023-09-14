@@ -1,0 +1,8 @@
+<template data-sly-template.productsInfoTemplate="${ @ productsInfo}">
+    <h3>Products</h3>
+	<sly data-sly-list.item=${productsInfo.productsInformation}>
+		<p><b>Name : </b>${item.productName}</p>
+		<p><b>Price : </b>${item.price}</p>
+		<p><b>Description : </b>${item.productDescription @ context = 'html'}</p>
+	</sly>
+</template>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[mydevelopment.employeeinfo]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <empId
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Add this to add id to your component root element"
+                        fieldLabel="Employee Id"
+                        name="./empId"/>
+                    <empName
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Enter Employee name"
+                        fieldLabel="Employee Name"
+                        name="./empName"
+                        validation="regex.name.validation"/>
+                    <empImage
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Employee Image"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <file
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                allowUpload="false"
+                                                autoStart="{Boolean}false"
+                                                class="cq-droptarget"
+                                                fieldLabel="Employee Image"
+                                                fileNameParameter="./fileName"
+                                                fileReferenceParameter="./fileReference"
+                                                mimeTypes="[image/.*]"
+                                                multiple="{Boolean}false"
+                                                name="./file"
+                                                title="Image"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </empImage>
+                    <empGender
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                        fieldDescription="Add this to add id to your component root element"
+                        fieldLabel="Gender"
+                        name="./empGender">
+                        <items jcr:primaryType="nt:unstructured">
+                            <male
+                                jcr:primaryType="nt:unstructured"
+                                text="Male"
+                                value="Male"/>
+                            <female
+                                jcr:primaryType="nt:unstructured"
+                                text="Female"
+                                value="Female"/>
+                        </items>
+                    </empGender>
+                    <empDOJ
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                        fieldDescription="Add this to add id to your component root element"
+                        fieldLabel="Date Of Joining"
+                        name="./empDOJ"/>
+                    <empPhoneNumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldDescription="Add this to add id to your component root element"
+                        fieldLabel="Mobile Number"
+                        name="./empMobileNumber"
+                        validation="regex.number.validation"/>
+                    <empDesignation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Add this to add id to your component root element"
+                        fieldLabel="Designation"
+                        name="./empDesignation">
+                        <items jcr:primaryType="nt:unstructured">
+                            <analyst
+                                jcr:primaryType="nt:unstructured"
+                                name="./analyst"
+                                text="Analyst"/>
+                            <associate
+                                jcr:primaryType="nt:unstructured"
+                                name="./associate"
+                                text="Associate"/>
+                            <consultant
+                                jcr:primaryType="nt:unstructured"
+                                name="./consultant"
+                                text="Consultant"/>
+                            <manager
+                                jcr:primaryType="nt:unstructured"
+                                name="./manager"
+                                text="Manager"/>
+                            <director
+                                jcr:primaryType="nt:unstructured"
+                                name="./director"
+                                text="Director"/>
+                        </items>
+                    </empDesignation>
+                    <empExperience
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        fieldLabel="Is Employee experienced?"
+                        name="./empExperience"/>
+                    <empDataPath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Employee Data Path"
+                        name="./empDataPath"
+                        rootPath="/content"/>
+                    <empResume
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fileupload"
+                        fieldLabel="Employee Resume"
+                        mimeTypes="[application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
+                        multiple="{Boolean}true"
+                        name="./empResume"
+                        text="Upload"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

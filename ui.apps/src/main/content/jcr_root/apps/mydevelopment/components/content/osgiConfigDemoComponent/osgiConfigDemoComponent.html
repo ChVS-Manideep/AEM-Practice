@@ -1,0 +1,27 @@
+<h2>OSGI Config Demo Component</h2>
+<sly data-sly-use.osgidemo = "com.practice.mydevelopment.core.models.OSGiConfigDemoModel" />
+
+<div><b>Service Name : </b><p>${osgidemo.getServiceName}</p></div>
+<div><b>Service Count : </b><p>${osgidemo.getServiceCount}</p></div>
+<div><b>Is Data live : </b><p>${osgidemo.isLiveData}</p></div>
+<div><b>Countries : </b><p>${osgidemo.getCountries}</p></div>
+<div><b>Runmodes : </b><p>${osgidemo.getRunModes}</p></div>
+
+
+========================================================================
+
+<div><p>Name : </p><b>${osgidemo.getName}</b></div>
+<div><p>Id : </p><b>${osgidemo.getId}</b></div>
+<div><p>Is Employee : </p><b>${osgidemo.isEmployee}</b></div>
+<div><p>Companies : </p><b>${osgidemo.getCompanies}</b></div>
+<div><p>Domains : </p><b>${osgidemo.getDomains}</b></div>
+
+
+==================================================================================
+
+<div data-sly-list="${osgidemo.allOSGiConfigs}">
+    ------Config # <b>${itemList.count}</b>-----
+    <div><p> Config ID: <b>${item.configID}</b></p></div>
+    <div><p> Service Name: <b>${item.serviceName}</b></p></div>
+    <div><p> Service URL : <b>${item.serviceURL}</b></p></div>
+</div>

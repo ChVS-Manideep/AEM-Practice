@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <vehicle-info-well
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        fieldLabel="Vehicle Info">
+                        <items jcr:primaryType="nt:unstructured">
+                            <state
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="State in which you want to buy a vehicle"
+                                fieldLabel="State"
+                                name="./state"/>
+                            <pincode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Enter the 6-digit pin-code of your city"
+                                fieldLabel="Pin Code"
+                                name="./pincode"/>
+                            <vehicles
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click 'Add' to add a new item"
+                                fieldLabel="Team Members Information">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./vehicleInfo">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <vehicleType
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldDescription="Add this to add id to your component root element"
+                                            fieldLabel="Designation"
+                                            name="./vehicleType">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <_x0032_wheeler
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./2wheeler"
+                                                    text="2-Wheeler"/>
+                                                <_x0033_wheeler
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./3wheeler"
+                                                    text="3-Wheeler"/>
+                                                <_x0034_wheeler
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./4wheeler"
+                                                    text="4-Wheeler"/>
+                                                <_x0031_0wheeler
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./10wheeler"
+                                                    text="10-Wheeler"/>
+                                            </items>
+                                        </vehicleType>
+                                        <manufacturer
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Manufacturer/Brand"
+                                            name="./manufacturer"/>
+                                        <year
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            fieldLabel="Year Of Manufacturing"
+                                            name="./year"/>
+                                        <price
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="Price"
+                                            name="./price"/>
+                                        <specifications
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldDescription="Click 'Add' to add a new item"
+                                            fieldLabel="Vehicle Specifications">
+                                            <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                name="./vehicleSpecs">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <specification
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Specification"
+                                                        name="./specification"/>
+                                                    <specificationValue
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Specification Value"
+                                                        name="./specificationValue"/>
+                                                </items>
+                                            </field>
+                                        </specifications>
+                                    </items>
+                                </field>
+                            </vehicles>
+                        </items>
+                    </vehicle-info-well>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

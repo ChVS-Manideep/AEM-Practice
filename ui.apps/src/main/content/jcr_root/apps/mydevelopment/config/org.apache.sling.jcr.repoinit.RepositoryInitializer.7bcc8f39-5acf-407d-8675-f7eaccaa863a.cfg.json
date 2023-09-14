@@ -1,0 +1,6 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "scripts":[
+    "create service user mydev-service-user1 with path /home/users/system/mydev/mydev-service-users"
+  ]
+}
